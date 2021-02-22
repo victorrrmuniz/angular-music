@@ -1,0 +1,20 @@
+.buttons {
+	width: 10%;
+}
+
+.addMusic {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 30px 0;
+}
+
+.music-input {
+	margin: 10px 10px;
+	flex: 3;
+}
+
+.music-button {
+	margin: 10px 10px;
+	flex: 1;
+}

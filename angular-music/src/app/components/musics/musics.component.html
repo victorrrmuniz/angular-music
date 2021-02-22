@@ -1,0 +1,29 @@
+<div class="container">
+	<h1 class="display-1">Musics</h1>
+	
+	<div class="addMusic">
+		<input type="text" class="form-control music-input" placeholder="Music" [(ngModel)]="name">
+		<input type="text" class="form-control music-input" placeholder="Band" [(ngModel)]="band">
+		<button class="btn btn-success music-button" (click)="addMusic()">Add</button>
+	</div>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Music</th>
+				<th>Band</th>
+				<th class="buttons"></th>
+				<th class="buttons"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let music of musicList">
+				<td>{{ music.name }}</td>
+				<td>{{ music.band }}</td>
+				<td><button class="btn btn-primary" (click)="updateMusic(music._id)">Update</button></td>
+				<td><button class="btn btn-danger" (click)="deleteMusic(music._id)">Delete</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
